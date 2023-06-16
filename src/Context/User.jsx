@@ -1,4 +1,4 @@
-import { useEffect, useState, createContext} from "react";
+import { useEffect, useState, createContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -23,7 +23,7 @@ function AuthProvider({ children }) {
   useEffect(() => {
     const user = localStorage.getItem('user');
 
-    if(user){
+    if (user) {
       let recoveredUser = JSON.parse(user)
       setIsAuthenticated(true)
       setTokem(recoveredUser.tokem)
@@ -46,28 +46,31 @@ function AuthProvider({ children }) {
         data: { username: email, password: password }
       }); 
       */
-      
-      let response = {status: 200, tokem: 123}
-      
-      if(response.status == 200){
+
+      let response = { status: 200, data: { tokem: 123 }}
+
+      if (response.status == 200) {
         setIsAuthenticated(true)
-        setTokem(response.data.id)
+        setTokem(response.data.tokem)
 
         loggedUser.name = email;
         loggedUser.tokem = tokem;
-
         localStorage.setItem("user", JSON.stringify(loggedUser))
       }
-      toast.info("Usuario não autorizado", {
-        hideProgressBar: true,
-        theme: "colored"
-      })
-      return
+
+      if (response.status == 403) {
+        toast.info("Usuario não autorizado", {
+          hideProgressBar: true,
+          theme: "colored"
+        })
+        return
+      }
     } catch (error) {
       toast.info("Erro ao na authenticação", {
         hideProgressBar: true,
         theme: "colored"
       })
+      console.log(error);
     }
   }
 
@@ -80,7 +83,7 @@ function AuthProvider({ children }) {
 
   // Redireciona o usuario quando estiver logado
   useEffect(() => {
-    if(isAuthenticated){
+    if (isAuthenticated) {
       navigate('../');
     }
   }, [isAuthenticated, tokem])
