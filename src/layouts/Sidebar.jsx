@@ -21,7 +21,7 @@ const Sidebar = () => {
       icon: "bi bi-list-ul",
       subItems: [
         {
-          title: "Item-2",
+          title: "Item-1",
           href: "/1",
           icon: "bi bi-bell",
         },
