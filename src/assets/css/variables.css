@@ -1,0 +1,75 @@
+/*******************/
+/* Theme Fonts */
+/********************/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+/*******************/
+/* Theme Colors */
+/********************/
+
+:root {
+  --primary: #2962ff;
+  --info: #3699ff;
+  --danger: #f64e60;
+  --success: #0bb7af;
+  --warning: #ee9d01;
+  --dark: #343a40;
+  --light: #eaf2fb;
+  --secondary: #35363b;
+  --font-family-sans-serif: "Nunito", sans-serif;
+
+  /* css-docs-start gray-color-variables */
+  --white: #fff;
+  --gray-100: #f8f9fa;
+  --gray-200: #eef5f9;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #757e85;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #1e2a35;
+  --black: #000;
+  
+  /*******************/
+  /* Theme Text Contrast */
+  /********************/
+  --min-contrast-ratio: 2;
+  
+  /*******************/
+  /* Theme body bg & text color */
+  /********************/
+  --body-bg: #eef5f9;
+  --body-color: #1e2a35;
+  
+  /*******************/
+  /*  Theme common variable */
+  /********************/
+  --border-radius: 0.3rem;
+  --box-shadow: 0 0.5rem 1rem rgba(#000, 0.05);
+  --headings-font-weight: 600;
+  
+  --card-border-width: 0;
+  --card-box-shadow: 0 0.5rem 1rem rgba(#000, 0.05);
+  --grid-gutter-width: 1.85rem;
+  
+  --input-bg: #fff;
+  /*******************/
+  /* Theme btn */
+  /********************/
+  --btn-focus-width: 0px;
+  
+  /*******************/
+  /* Theme sidebar width */
+  /********************/
+  --sidebarWidth: 260px;
+  --sidebarColor: #fff;
+
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #1e2a35;
+  --bs-body-bg: #eef5f9;
+}
+
+
+

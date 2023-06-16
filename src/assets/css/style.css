@@ -1,0 +1,17 @@
+@import "variables.css";
+
+
+@import "./layout/sidebar.css";
+@import "./layout/container.css";
+
+body{ 
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e2a35;
+  background-color:  #eef5f9;
+}
+
+.pointer:hover{
+   cursor: pointer;
+}
