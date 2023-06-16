@@ -30,7 +30,7 @@ const Login = () => {
         <CardBody>
           <Row className='p-3'>
             <Col>
-              <h3 className="mb-3 font-weight-normal">Sistema de Pesquisa</h3>
+              <h3 className="mb-3 font-weight-normal">Sistema de authenticação</h3>
               <Form onSubmit={handleSubmit}>
                 <FormGroup>
                   <Row className='mb-2'>
@@ -39,7 +39,6 @@ const Login = () => {
                       type="text"
                       placeholder='Username'
                       value={formValues.username}
-                      required
                       onChange={handleFormsChange}
                     />
                   </Row>
@@ -51,7 +50,6 @@ const Login = () => {
                       type="password"
                       placeholder='Senha'
                       value={formValues.password}
-                      required
                       onChange={handleFormsChange}
                     />
                   </Row>
